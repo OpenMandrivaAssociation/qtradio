@@ -1,6 +1,6 @@
 %define name	qtradio
 %define version	0.8.1
-%define release	5mdk
+%define release	%mkrel 5
 
 Summary:	QtRadio - listen to the radio with QtRadio
 Name:		%{name}
