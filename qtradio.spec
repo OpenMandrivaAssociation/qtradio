@@ -16,7 +16,6 @@ Source0:	%{name}-%{version}.tar.bz2
 # Patch0: use skins in /usr/share, not /usr/local/share
 Patch0:		%{name}-0.8.0-path.patch.bz2
 Patch1:		%{name}-0.8.1-compile.patch.bz2
-BuildRoot:	%{_tmppath}/%{name}-%{version}
 BuildRequires:	qt3-devel
 
 %description
