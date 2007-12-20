@@ -46,18 +46,16 @@ mkdir -p %{buildroot}/%{_datadir}/QtRadio
 cp -f -R QtRadio %{buildroot}/%{_datadir}
 
 
-(cd $RPM_BUILD_ROOT
-mkdir -p .%{_menudir}/menu
-cat > .%{_menudir}/%name <<EOF
-?package(%name):\
-command="%{_bindir}/%{name}"\
-icon="%name.png"\
-title="QtRadio"\
-longtitle="QtRadio - listen to the radio with QtRadio."\
-needs="x11"\
-section="Multimedia/Sound"
+mkdir -p $RPM_BUILD_ROOT%{_datadir}/applications//menu
+cat << EOF > %buildroot%{_datadir}/applications/mandriva-%name.desktop
+[Desktop Entry]
+Type=Application
+Exec=%{_bindir}/%{name}
+Icon=%name
+Name=QtRadio
+Comment=QtRadio - listen to the radio with QtRadio.
+Categories=Audio;
 EOF
-)
 
 install -d %buildroot/%_miconsdir
 install -d %buildroot/%_liconsdir
@@ -89,6 +87,6 @@ rm -rf %{buildroot}
 %dir %{_datadir}/QtRadio
 %{_datadir}/QtRadio/*
 #%{_datadir}/icons/*
-%{_menudir}/%{name}
+%{_datadir}/applications/mandriva-%{name}.desktop
 
 
