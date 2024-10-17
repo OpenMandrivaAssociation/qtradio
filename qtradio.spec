@@ -7,7 +7,7 @@ Name:		%{name}
 Version:	%{version}
 Release:	%{release}
 License:	GPL
-URL:		http://linux.perlak.com/project.php?prj_name=qtradio
+URL:		https://linux.perlak.com/project.php?prj_name=qtradio
 Group:		Sound
 Source0:	%{name}-%{version}.tar.bz2
 #Source1:	%{name}_16.png
